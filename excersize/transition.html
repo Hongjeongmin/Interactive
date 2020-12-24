@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box-container {
+            display: flex;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 0, 0.7);
+            border: 2px solid gray;
+            /* 등속도 옵션 linear 먼가 딱딱해보임 없애는게 더좋음*/
+            /* transition: 1s linear; */
+            /* Chrom 개발자도구를 이용해서 구하기 */
+            transition: 1s cubic-bezier(0.25, 0.1, 0.55, 1.96);
+        }
+        .box:hover{
+            transform: scale(2) rotate(15deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Transform</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit rerum illum eveniet repellendus adipisci ut vitae
+        facilis minus sint. Explicabo, asperiores facere pariatur adipisci rem dolorem cum minima cupiditate quia ipsum
+        consectetur est officiis dolore ullam tempore, repellat quae vero harum! Perspiciatis recusandae distinctio
+        ipsum vero, ullam assumenda pariatur animi ratione fugit enim? Saepe blanditiis optio veniam iusto expedita
+        suscipit accusamus velit non vero nostrum, et deserunt alias magni, consequatur cupiditate praesentium molestias
+        nihil id. At soluta officiis officia nulla unde quos consequuntur debitis blanditiis assumenda nemo ducimus
+        delectus, corporis in tempore tenetur numquam mollitia recusandae deleniti accusantium velit maxime enim quia
+        ex. Voluptas odit officiis vitae ducimus assumenda aspernatur ut, quod magnam accusantium est harum ullam
+        provident, excepturi repellat quo ea, animi adipisci suscipit vero quasi non commodi architecto ipsam numquam!
+        Aliquam quia laudantium, quisquam laboriosam expedita provident repellat, omnis ea, corporis non veniam. Sequi
+        voluptas eveniet saepe provident fugiat sunt in consequatur laborum, commodi explicabo qui numquam, molestiae
+        ipsum atque odit quisquam accusamus quos illum suscipit dolorum dicta, magnam beatae! Vero beatae soluta quod
+        excepturi hic inventore nemo officiis nesciunt repudiandae recusandae ea, tempore veritatis omnis vitae nobis
+        doloremque, quae eveniet. Hic sapiente minus dolore cumque, dolores beatae laboriosam laborum magnam excepturi
+        deserunt consequuntur vitae ullam nobis molestiae earum atque temporibus, reprehenderit inventore? Voluptatibus
+        in doloribus similique cum praesentium aspernatur unde libero quo at consequuntur delectus nobis, atque quam,
+        tempore blanditiis nam quod culpa molestiae vero odio, nesciunt accusantium. Accusantium rem odit beatae magni?
+        Quasi aliquam vel ad doloremque exercitationem maiores, praesentium distinctio sunt cum dolorem? Id, minima.
+        Commodi rerum vero facere perferendis iste dolorem deserunt quaerat at, sint atque ut doloremque dolores impedit
+        quia nobis eos maxime corrupti illo excepturi deleniti. Ex, rerum, ad mollitia omnis accusamus quam facilis
+        dolor est explicabo beatae eum, impedit ullam sequi.
+    </p>
+    <div class="box-container">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+        <div class="box">D</div>
+        <div class="box">E</div>
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit rerum illum eveniet repellendus adipisci ut vitae
+        facilis minus sint. Explicabo, asperiores facere pariatur adipisci rem dolorem cum minima cupiditate quia ipsum
+        consectetur est officiis dolore ullam tempore, repellat quae vero harum! Perspiciatis recusandae distinctio
+        ipsum vero, ullam assumenda pariatur animi ratione fugit enim? Saepe blanditiis optio veniam iusto expedita
+        suscipit accusamus velit non vero nostrum, et deserunt alias magni, consequatur cupiditate praesentium molestias
+        nihil id. At soluta officiis officia nulla unde quos consequuntur debitis blanditiis assumenda nemo ducimus
+        delectus, corporis in tempore tenetur numquam mollitia recusandae deleniti accusantium velit maxime enim quia
+        ex. Voluptas odit officiis vitae ducimus assumenda aspernatur ut, quod magnam accusantium est harum ullam
+        provident, excepturi repellat quo ea, animi adipisci suscipit vero quasi non commodi architecto ipsam numquam!
+        Aliquam quia laudantium, quisquam laboriosam expedita provident repellat, omnis ea, corporis non veniam. Sequi
+        voluptas eveniet saepe provident fugiat sunt in consequatur laborum, commodi explicabo qui numquam, molestiae
+        ipsum atque odit quisquam accusamus quos illum suscipit dolorum dicta, magnam beatae! Vero beatae soluta quod
+        excepturi hic inventore nemo officiis nesciunt repudiandae recusandae ea, tempore veritatis omnis vitae nobis
+        doloremque, quae eveniet. Hic sapiente minus dolore cumque, dolores beatae laboriosam laborum magnam excepturi
+        deserunt consequuntur vitae ullam nobis molestiae earum atque temporibus, reprehenderit inventore? Voluptatibus
+        in doloribus similique cum praesentium aspernatur unde libero quo at consequuntur delectus nobis, atque quam,
+        tempore blanditiis nam quod culpa molestiae vero odio, nesciunt accusantium. Accusantium rem odit beatae magni?
+        Quasi aliquam vel ad doloremque exercitationem maiores, praesentium distinctio sunt cum dolorem? Id, minima.
+        Commodi rerum vero facere perferendis iste dolorem deserunt quaerat at, sint atque ut doloremque dolores impedit
+        quia nobis eos maxime corrupti illo excepturi deleniti. Ex, rerum, ad mollitia omnis accusamus quam facilis
+        dolor est explicabo beatae eum, impedit ullam sequi.
+    </p>
+</body>
+
+</html>
