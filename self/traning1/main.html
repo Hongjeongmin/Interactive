@@ -10,14 +10,25 @@
         href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lato&family=Lobster&family=Open+Sans&family=Roboto&display=swap"
         rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             padding: 0;
-            height: 1000px;
-            display: flex;
-            position: relative;
         }
-        .container{
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .Inner-container {
             display: flex;
             flex-direction: column;
 
@@ -60,26 +71,28 @@
         }
 
         .optionBar {
+            position: absolute;
             margin: 0px;
             padding: 0px;
             width: 200px;
             height: 100%;
-            top: 56px;
             border-top: 1px solid gray;
-            position: absolute;
             transition: all 0.5s;
             background-color: tomato;
         }
 
-        .optionBar>ul {
-            position: relative;
-        }
-
         footer {
             border: solid 1px gray;
+            width: 100%;
             height: 150px;
-            bottom: 0px;
+            bottom: -56px;
             position: absolute;
+            background-color: black;
+        }
+
+        main {
+            height: 100%;
+            width: auto;
         }
     </style>
     <script language="javascript">
@@ -100,24 +113,23 @@
 </head>
 
 <body>
-    <div class="optionBar">
-        <ul>
-            <li>소개</li>
-            <li>프로젝트</li>
-            <li>블로그</li>
-            <li>Git Hub</li>
-        </ul>
-    </div>
+    <header>
+        <div class="icon-border">
+            <div class="icon-menu-outline" onclick="menuClick()"></div>
+        </div>
+        <div class="title-text">
+            <h2>Redbin Portfolio</h2>
+        </div>
+    </header>
     <div class="container">
-        <header>
-            <div class="icon-border">
-                <div class="icon-menu-outline" onclick="menuClick()"></div>
-            </div>
-            <div class="title-text">
-                <h2>Redbin Portfolio</h2>
-            </div>
-        </header>
-
+        <div class="optionBar">
+            <ul>
+                <li>소개</li>
+                <li>프로젝트</li>
+                <li>블로그</li>
+                <li>Git Hub</li>
+            </ul>
+        </div>
         <nav>
             <searchbar>
                 <search></search>
@@ -125,23 +137,45 @@
                 </search>
                 <setting></setting>
         </nav>
-        <main>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, deleniti quibusdam rerum doloremque
-            doloribus
-            dicta magnam eos amet explicabo error dolore consequatur blanditiis ratione tempora pariatur ut autem dolor
-            cupiditate fuga velit? Odio nesciunt iure corporis repellendus earum veritatis. Voluptatum doloribus
-            molestiae
-            praesentium quasi nostrum quibusdam natus dicta recusandae, porro temporibus eveniet nisi mollitia molestias
-            sed
-            autem. Earum sint voluptas culpa nesciunt, doloribus facilis fugiat a autem ea explicabo aliquid quae maxime
-            nostrum, molestiae aut voluptatem laborum, eaque quia asperiores! Similique eveniet quibusdam at laboriosam
-            quas
-            aliquid sunt aut atque delectus, officia ipsum culpa tempore? Mollitia, nisi! Ipsam, perferendis esse?
-        </main>
-        <footer>
-            test
-        </footer>
+        <div class="Inner-container">
+            <main>
+                <p>
+                    aliquid sunt aut atque delectus, officia ipsum culpa tempore? Mollitia, nisi! Ipsam, perferendis
+                    esse?
+                    nostrum, molestiae aut voluptatem laborum, eaque quia asperiores! Similique eveniet quibusdam at
+                    laboriosam
+                    quas
+                    aliquid sunt aut atque delectus, officia ipsum culpa tempore? Mollitia, nisi! Ipsam, perferendis
+                    esse?
+                </p>
+                <p>
+                    aliquid sunt aut atque delectus, officia ipsum culpa tempore? Mollitia, nisi! Ipsam, perferendis
+                    esse?
+                    nostrum, molestiae aut voluptatem laborum, eaque quia asperiores! Similique eveniet quibusdam at
+                    laboriosam
+                    quas
+                    aliquid sunt aut atque delectus, officia ipsum culpa tempore? Mollitia, nisi! Ipsam, perferendis
+                    esse?
+                </p>
+                <p>
+                    aliquid sunt aut atque delectus, officia ipsum culpa tempore? Mollitia, nisi! Ipsam, perferendis
+                    esse?
+                    nostrum, molestiae aut voluptatem laborum, eaque quia asperiores! Similique eveniet quibusdam at
+                    laboriosam
+                    quas
+                    aliquid sunt aut atque delectus, officia ipsum culpa tempore? Mollitia, nisi! Ipsam, perferendis
+                    esse?
+                </p>
+            </main>
+            <footer>
+            </footer>
+        </div>
     </div>
+
+
+
+
+
 </body>
 
 </html>
