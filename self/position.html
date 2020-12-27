@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .parent{
+            width : 500px;
+            height: 500px;
+            left: 50px;
+            background-color: tomato;
+            position: relative;
+        }
+
+        .child{
+            position: static;
+            right: 55px;
+        }
+
+        .other{
+            right:0px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">child</div>
+    </div>
+    
+    <div class="other"> other</div>
+
+
+    
+</body>
+</html>
