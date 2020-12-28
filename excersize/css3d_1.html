@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .world{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            width: 60vw;
+            height: 60vh;
+            background-color: yellow;
+            /* 눈에서 거리라고 생각하면 될듯. 가까이 있을 때랑 멀리 있을 때 생각해보자. */
+            /* perspective: 500px; */
+
+        }
+        .card{
+            display: flex;
+            margin: 1em;
+            width: 100px;
+            height: 100px;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 150px;
+            border-radius: 0.5em;
+            font-size: 1.5rem;
+            border-radius: 1em;
+            background-color: red;
+            transform: perspective(500px) rotateY(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="world">
+        <div class="card">CARD</div>
+        <div class="card">CARD</div>
+        <div class="card">CARD</div>
+    </div>
+</body>
+</html>
