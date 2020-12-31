@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="menu">
+        <button class="menu-btn">
+            <img class="icon" src="../images/1.png" alt="">
+            <span class="btn-albel">어몽 1</span>
+        </button>
+        <button class="menu-btn">
+            <img class="icon" src="../images/2.png" alt="">
+            <span class="btn-albel">어몽 2</span>
+        </button>
+        <button class="menu-btn">
+            <img class="icon" src="../images/3.png" alt="">
+            <span class="btn-albel">어몽 3</span>
+        </button>
+    </div>
+    <script>
+        const btns = document.querySelectorAll('menu-btn');
+        function clickBtnHandler(){
+            console.log(this);
+        }
+
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click',clickBtnHandler);
+        }
+    </script>
+</body>
+
+</html>

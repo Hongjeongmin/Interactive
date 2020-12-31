@@ -11,3 +11,11 @@ const pElem = document.createElement('p');
 pElem.innerHTML = '<a href="#">안녕 </a>';
 
 a.appendChild(pElem);
+
+//추가
+a.classList.add('special');
+//대체
+a.className = 'special';
+
+a.classList.remove();
+a.classList.toggle();

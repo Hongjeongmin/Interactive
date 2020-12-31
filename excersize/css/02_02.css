@@ -1,0 +1,47 @@
+.stage{
+    overflow: hidden;
+    position: relative;
+    /* vw : viewport width */
+    /* vh : viewport height */
+    width: 100vw;
+    height: 75vw;
+    /* 4:3∫Ò¿≤ */
+    background-color: yellow;
+}
+@keyframes moving{
+    from {
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(90vw);
+    }
+}
+
+.among{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    
+}
+
+.among:nth-of-type(1){
+    animation:moving 5s infinite alternate;
+    left: 5%;
+    bottom: 5%;
+    background-image: url('../images/1.png');
+}
+.among:nth-of-type(2){
+    animation:moving 9s infinite alternate;
+    left: 10%;
+    bottom: 3%;
+    background-image: url('../images/2.png');
+}
+.among:nth-of-type(3){
+    animation:moving 3s infinite alternate;
+    left: 7%;
+    bottom: 10%;
+    background-image: url('../images/3.png');
+}

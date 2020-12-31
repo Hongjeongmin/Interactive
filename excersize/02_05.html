@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /* .btn-label{
+            pointer-events: none;
+        }
+        .icon{
+            pointer-events: none;
+        } */
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="menu">
+
+    </div>
+    <script>
+        const menu = document.querySelector('.menu');
+        function clickBtnHandler(e) {
+            // console.log(e.target.getAttribute('data-value'));
+            let elem = e.target;
+            while (!elem.classList.contains('menu-btn')) {
+                elem = elem.parentNode;
+                if (elem.nodeName == 'BODY') {
+                    elem = null;
+                    return;
+                }
+            }
+            console.log(elem.dataset.value);
+        }
+        menu.addEventListener('click', clickBtnHandler);
+        window.addEventListener('click', () => {
+            const htmlStr = `        <button class="menu-btn" data-value="1">
+            <img class="icon" src="../images/1.png" alt="">
+            <span class="btn-albel">어몽 1</span>
+        </button>
+        <button class="menu-btn" data-value="2">
+            <img class="icon" src="../images/2.png" alt="">
+            <span class="btn-albel">어몽 2</span>
+        </button>
+        <button class="menu-btn" data-value="3">
+            <img class="icon" src="../images/3.png" alt="">
+            <span class="btn-albel">어몽 3</span>
+        </button>`;
+            menu.innerHTML = htmlStr;
+        });
+    </script>
+</body>
+
+</html>

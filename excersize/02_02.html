@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/02_02.css">
+</head>
+
+<body>
+    <div class="stage">
+        <div class="among"></div>
+        <div class="among"></div>
+        <div class="among"></div>
+    </div>
+
+</body>
+<script>
+    (function () {
+        const amongGroup = document.querySelectorAll('.among');
+        const stage = document.querySelector('.stage');
+        function removeHandler(e) {
+            stage.removeChild(e);
+        }
+
+        function clickHandler(e) {
+            // removeHandler(this);
+            this.parentNode.removeChild(this);
+        }
+
+        for (let i = 0; i<amongGroup.length; i++) {
+            amongGroup[i].addEventListener('click', clickHandler);
+        }
+    })();
+</script>
+
+</html>
