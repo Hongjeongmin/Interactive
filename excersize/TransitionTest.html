@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ball {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            margin: -15px 0 0 -15px;
+            border-radius: 50%;
+            transition: 1s;
+            background-color: rebeccapurple;
+        }
+        .ball.end{
+            background: dodgerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ball"></div>
+    <script>
+        const ballElem = document.querySelector('.ball');
+
+        window.addEventListener('click', function (e) {
+            ballElem.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+        });
+
+        // start도 있음.
+        ballElem.addEventListener('transitionend',function(e){
+            console.log('무한');
+            if(!ballElem.classList.contains('end')){
+                ballElem.classList.add('end');
+            }else{
+                ballElem.classList.remove('end');
+            }
+            console.log(e.elapsedTime);
+            console.log(e.propertyName);
+        });
+
+    </script>
+</body>
+
+</html>
