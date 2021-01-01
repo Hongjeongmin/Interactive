@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .content {
+        padding: 20%;
+        /* viewport height */
+        height: 1000vh;
+        background-color: greenyellow;
+    }
+
+    .output {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        font-size: 2rem;
+        font-weight: 200;
+        columns: #fff;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .among {
+        width: 100px;
+        margin: 20px auto;
+        transition: 1s;
+    }
+
+    .among.zoom {
+        transform: scale(2);
+    }
+</style>
+
+<body>
+    <div class="output">output</div>
+    <div class="content">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In iusto necessitatibus sit repudiandae officiis
+            commodi amet architecto similique ut deleniti minus dolor numquam consequuntur, quaerat aspernatur eligendi
+            doloribus nesciunt obcaecati corporis voluptatum. Architecto iusto tempore, dolore, cum placeat iste nostrum
+            nesciunt vitae saepe debitis, perferendis temporibus nemo quia error at cupiditate porro distinctio
+            dignissimos voluptates sint explicabo neque natus. Unde accusamus laborum nam modi explicabo alias
+            reprehenderit magnam debitis labore saepe! Earum molestiae, praesentium dolore corrupti ipsum obcaecati,
+            saepe laborum debitis repellat explicabo iste quidem rerum quisquam possimus dignissimos accusamus eligendi
+            nisi quam sapiente a. Minus consectetur modi earum repellat provident placeat, velit, dolorum delectus
+            voluptate sed impedit rem animi voluptates, ducimus eos nesciunt quidem facilis praesentium? Debitis
+            delectus nihil a ipsum maiores, voluptatum cumque eligendi dignissimos voluptates tempore modi repudiandae
+            quia? Possimus maxime distinctio, nemo eos ullam quo omnis minima suscipit mollitia, iure quaerat maiores
+            obcaecati iusto id exercitationem voluptatum error autem sit esse animi. Minus hic soluta nesciunt aliquam
+            eum quos totam voluptas pariatur error ipsam cumque ex, quisquam, quaerat quia ab quod velit similique odit
+            consectetur et modi quasi recusandae voluptate dolores. Nobis ipsum tenetur dicta laudantium reprehenderit
+            numquam debitis necessitatibus deserunt, nostrum earum quis perferendis tempore placeat deleniti cumque
+            accusantium aspernatur adipisci possimus minus asperiores repellendus impedit sequi dolorem ad? Veniam illum
+            corporis fugiat quam labore architecto odit perspiciatis molestias consequatur, perferendis minus officiis
+            porro eius quia earum, distinctio sed amet, quo iure! Atque cum nobis corporis, numquam, aliquid expedita
+            ratione repellendus quaerat magnam libero neque amet provident iste dicta quisquam sequi molestias. Nesciunt
+            reprehenderit explicabo error. Quae repellendus soluta vitae perferendis impedit reprehenderit dolor natus
+            et nostrum voluptas ea exercitationem inventore vel non, repudiandae ut quod, culpa error similique atque
+            temporibus. Assumenda asperiores vero commodi qui velit. Eum perferendis autem aut odio unde animi
+            asperiores?
+        </p>
+        <figure class="among">
+            <img src="images/1.png" alt="among">
+        </figure>
+    </div>
+    <script>
+        (function () {
+            const ouputElem = document.querySelector('.output');
+            const amongElem = document.querySelector('.among');
+
+            function showValue() {
+                // 윈도우 전역 객체가 가진 속성
+                // ouputElem.innerHTML = window.pageYOffset;
+                // ouputElem.innerHTML = amongElem.offsetTop;
+                // 위치정보 크기들을 담은 객체임.
+                let posY = amongElem.getBoundingClientRect().top;
+                ouputElem.innerHTML = posY;
+
+                if(posY < window.innerHeight * 0.2){
+                    amongElem.classList.add('zoom');
+                }else{
+                    amongElem.classList.remove('zoom');
+                }
+                
+            }
+
+            window.addEventListener('scroll', function () {
+                showValue();
+            });
+        })();
+    </script>
+</body>
+
+</html>
