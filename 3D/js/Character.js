@@ -28,6 +28,8 @@ function Character(info) {
     + '</div>';
     this.mainElem.style.left = info.xPos + '%';
     document.querySelector('.stage').appendChild(this.mainElem);
+    // 스크롤 중인지 아닌지 Check
+    this.scrollState = false;
     this.init();
 }
 
@@ -37,7 +39,15 @@ Character.prototype ={
         const self = this;
 
         window.addEventListener('scroll',function(){
-            self.mainElem.classList.add('running');
+            clearTimeout(self.scrollState);
+            if(!self.scrollState){
+                self.mainElem.classList.add('running');
+            }
+            self.scrollState = setTimeout(function(){
+                self.scrollState =false;
+                self.mainElem.classList.remove('running');
+                console.log('tst');
+            },500);
         });
     }
 };
