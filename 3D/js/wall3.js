@@ -21,10 +21,13 @@
         mousePos.x = -1 + (e.clientX / window.innerWidth) * 2;
         mousePos.y = 1 - (e.clientY / window.innerHeight) * 2;
         stageElem.style.transform = 'rotateX(' + (mousePos.y * 5) + 'deg) rotateY(' + (mousePos.x * 5) + 'deg)';
-        console.log(mousePos);
     });
 
     window.addEventListener('resize', resizeHandler);
+
+    stageElem.addEventListener('click', function (e) {
+        new Character({xPos : e.clientX / window.innerWidth *100});
+    });
 
     resizeHandler();
 })();
